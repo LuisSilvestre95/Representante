@@ -1,0 +1,15 @@
+/* Hoja de vida */
+.cv-header {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+.cv-section {
+  margin-bottom: var(--spacing-lg);
+}
+.cv-item {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  background: var(--color-blanco);
+  box-shadow: var(--sombra-suave);
+}

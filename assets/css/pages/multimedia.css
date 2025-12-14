@@ -1,0 +1,168 @@
+/* multimedia.css - Para multimedia.html */
+.multimedia-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 30px;
+}
+
+.multimedia-grid iframe {
+  width: 100%;
+  min-height: 500px;
+  border-radius: 18px;
+  border: 3px solid var(--color-verde);
+  box-shadow: var(--sombra-media);
+  transition: transform 0.3s ease;
+}
+
+.multimedia-grid iframe:hover {
+  transform: scale(1.02);
+}
+
+/* Social Reels Grid - Formato vertical optimizado */
+.social-reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.reel-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: visible;
+  background: var(--color-blanco);
+  box-shadow: var(--sombra-media);
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base);
+  text-decoration: none;
+}
+
+.reel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.reel-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16; /* Formato vertical tipo reel */
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 148, 64, 0.1),
+    rgba(255, 193, 7, 0.1)
+  );
+}
+
+.reel-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.reel-card:hover .reel-thumbnail img {
+  transform: scale(1.08);
+}
+
+.reel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.reel-card:hover .reel-overlay {
+  opacity: 1;
+}
+
+.reel-overlay i {
+  font-size: 2.8rem;
+  color: #fff;
+}
+
+.reel-overlay span {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reel-info {
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: visible;
+  min-height: 80px;
+}
+
+.reel-info strong {
+  font-size: 0.95rem;
+  color: var(--color-negro);
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  white-space: normal;
+  display: block;
+}
+
+.reel-info .text-muted {
+  font-size: 0.85rem;
+}
+
+/* Colores por red social */
+.reel-card.tiktok:hover {
+  border-bottom: 4px solid #000;
+}
+
+.reel-card.instagram:hover {
+  border-bottom: 4px solid #e4405f;
+}
+
+.reel-card.youtube:hover {
+  border-bottom: 4px solid #ff0000;
+}
+
+.reel-card.facebook:hover {
+  border-bottom: 4px solid #1877f2;
+}
+
+@media (max-width: 768px) {
+  .social-reels-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .reel-card {
+    overflow: visible;
+  }
+
+  .reel-info {
+    padding: 12px 15px;
+    min-height: 90px;
+  }
+
+  .reel-info strong {
+    font-size: 1rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
+  .reel-info .text-muted {
+    font-size: 0.8rem;
+  }
+}

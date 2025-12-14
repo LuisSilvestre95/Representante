@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Andrés Guerrero 106</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="preloader"><div class="badge-106">106</div></div>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <div class="nav-bar">
+        <div class="nav-left">
+          <img
+            class="party-logo"
+            src="assets/img/logo-partido.png"
+            alt="Logo del partido"
+          />
+
+          <div class="brand-copy">
+            <strong>Andrés Guerrero</strong>
+            <span>Representante · Bogotá</span>
+          </div>
+        </div>
+        <div class="nav-links" data-open="false">
+          <a href="index.html">Inicio</a>
+          <a href="propuestas.html">Propuestas</a>
+          <a href="logros.html">Logros</a>
+          <a href="historia.html">Historia</a>
+          <a href="multimedia.html">Multimedia</a>
+          <a href="contacto.html" class="nav-cta active">Súmate</a>
+        </div>
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="section contacto-layout" id="sumate">
+        <div>
+          <span class="tag"
+            ><i class="fas fa-user-plus" style="color: #0c7fb0"></i>
+            Súmate</span
+          >
+          <h1 class="section-title">Súmate</h1>
+          <p class="lead">
+            Voluntarios, testigos y aliados: déjanos tus datos.
+          </p>
+        </div>
+        <div class="form-card">
+          <p class="form-hint">
+            Los datos viajan a Firestore; si falla, se registra en modo mock.
+          </p>
+          <form id="contactForm">
+            <div class="input-group">
+              <label>Nombre</label>
+              <input name="nombre" required />
+            </div>
+            <div class="input-group">
+              <label>Apellido</label>
+              <input name="apellido" required />
+            </div>
+            <div class="input-group">
+              <label>Teléfono</label>
+              <input name="telefono" required />
+            </div>
+            <div class="input-group">
+              <label>Localidad</label>
+              <select name="localidad" required>
+                <option value="">Selecciona tu localidad</option>
+                <option value="Usaquén">Usaquén</option>
+                <option value="Chapinero">Chapinero</option>
+                <option value="Santa Fe">Santa Fe</option>
+                <option value="San Cristóbal">San Cristóbal</option>
+                <option value="Usme">Usme</option>
+                <option value="Tunjuelito">Tunjuelito</option>
+                <option value="Bosa">Bosa</option>
+                <option value="Kennedy">Kennedy</option>
+                <option value="Fontibón">Fontibón</option>
+                <option value="Engativá">Engativá</option>
+                <option value="Suba">Suba</option>
+                <option value="Barrios Unidos">Barrios Unidos</option>
+                <option value="Teusaquillo">Teusaquillo</option>
+                <option value="Los Mártires">Los Mártires</option>
+                <option value="Antonio Nariño">Antonio Nariño</option>
+                <option value="Puente Aranda">Puente Aranda</option>
+                <option value="La Candelaria">La Candelaria</option>
+                <option value="Rafael Uribe Uribe">Rafael Uribe Uribe</option>
+                <option value="Ciudad Bolívar">Ciudad Bolívar</option>
+                <option value="Sumapaz">Sumapaz</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>¿Cómo quieres ayudar?</label>
+              <select name="ayuda" required>
+                <option value="">Selecciona</option>
+                <option value="Voluntario">Voluntario</option>
+                <option value="Testigo">Testigo</option>
+                <option value="Coordinador de zona">Coordinador de zona</option>
+                <option value="Digital">Digital</option>
+                <option value="Donante">Donante</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <div>
+          <strong>Andrés Guerrero 106</strong>
+          <p class="text-muted">
+            Representante a la Cámara por Bogotá · Alianza Verde
+          </p>
+        </div>
+        <div class="footer-socials">
+          <a href="https://instagram.com" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://facebook.com" aria-label="Facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://tiktok.com" aria-label="TikTok"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+        </div>
+      </div>
+      <div class="container">
+        <p class="text-muted">
+          © <span data-year></span> · Construido con amor por el campo.
+        </p>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-btn"
+      href="https://wa.me/573001234567?text=Hola%20Andres%2C%20quiero%20sumarme%20a%20tu%20campaña"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/script-global.js"></script>
+  </body>
+</html>

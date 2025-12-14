@@ -1,0 +1,15 @@
+/* reels.css - Para reels.html */
+.reels-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 30px;
+}
+
+.reels-grid iframe {
+  width: 100%;
+  min-height: 600px;
+  border-radius: 18px;
+  border: 3px solid var(--color-girasol);
+  box-shadow: var(--sombra-media);
+}

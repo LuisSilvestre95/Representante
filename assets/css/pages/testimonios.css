@@ -1,0 +1,24 @@
+/* Testimonios */
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+}
+.testimonio {
+  background: var(--color-blanco);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--sombra-suave);
+  position: relative;
+}
+.testimonio::before {
+  content: "\201C";
+  font-size: 3rem;
+  color: var(--color-girasol);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+.testimonio small {
+  color: var(--color-gris);
+}

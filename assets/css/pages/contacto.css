@@ -1,0 +1,18 @@
+/* Contacto */
+.contacto-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+.form-card {
+  background: var(--color-blanco);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--sombra-suave);
+  overflow: visible;
+}
+.form-hint {
+  color: var(--color-gris);
+  margin-bottom: var(--spacing-md);
+}

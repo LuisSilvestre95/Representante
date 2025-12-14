@@ -1,0 +1,71 @@
+/* Fixes y compatibilidad */
+body.loaded .preloader {
+  display: none;
+}
+.preloader.hidden {
+  display: none;
+}
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+.preloader .badge-106 {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+footer {
+  background: var(--color-negro);
+  color: #dfe6e1;
+  padding: var(--spacing-xl) 0;
+  margin-top: var(--spacing-2xl);
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-socials {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-right: 86px; /* despejar el botón de WhatsApp */
+}
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-girasol);
+}
+.footer-socials a:hover {
+  background: var(--color-verde);
+  color: #fff;
+}
+main {
+  margin-top: clamp(170px, 18vw, 240px);
+}
+
+@media (max-width: 768px) {
+  /* Inicio necesita más espacio para ver VOTO 106 */
+  .page-home main {
+    margin-top: 100px !important;
+  }
+
+  /* Páginas internas suben mucho más */
+  body:not(.page-home) main {
+    margin-top: 85px !important;
+  }
+}
+
+.scroll-top-btn {
+  opacity: 0;
+  pointer-events: none;
+}

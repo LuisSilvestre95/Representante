@@ -1,0 +1,225 @@
+/* Componentes reutilizables */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--border-radius-full);
+  background: rgba(0, 148, 64, 0.1);
+  color: var(--color-verde);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.tile {
+  background: var(--color-blanco);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--sombra-suave);
+  border: 1px solid var(--color-gris-muy-claro);
+  overflow: visible;
+}
+.input-group {
+  margin-bottom: var(--spacing-md);
+}
+.input-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--color-gris);
+}
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--border-radius-md);
+  border: 2px solid var(--color-gris-muy-claro);
+  background: var(--color-blanco);
+  transition: border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--color-verde);
+  box-shadow: 0 0 0 3px rgba(0, 148, 64, 0.15);
+}
+.alert {
+  padding: 12px 14px;
+  border-radius: var(--border-radius-md);
+  border-left: 4px solid;
+  background: rgba(0, 148, 64, 0.08);
+  color: var(--color-verde-oscuro);
+}
+.badge-106 {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.4rem;
+  background: linear-gradient(135deg, var(--color-verde), var(--color-girasol));
+  color: var(--color-blanco);
+  box-shadow: var(--sombra-media);
+}
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366, #20ba5a);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  z-index: 900;
+  transition: transform var(--transition-base);
+}
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Botón flotante 106 superior derecho */
+.floating-106-btn {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--color-verde),
+    var(--color-verde-oscuro)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 148, 64, 0.4);
+  z-index: 900;
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base);
+  text-decoration: none;
+}
+.floating-106-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 28px rgba(0, 148, 64, 0.5);
+}
+.badge-106-float {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--color-blanco);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: blink-number 1.5s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .floating-106-btn {
+    width: 52px;
+    height: 52px;
+    top: 95px;
+    right: 15px;
+  }
+  .badge-106-float {
+    font-size: 1.3rem;
+  }
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--border-radius-full);
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: rgba(0, 148, 64, 0.08);
+  color: var(--color-verde-oscuro);
+}
+.pill i {
+  font-size: 1rem;
+}
+.pill-soft {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-gris);
+}
+.pill-green {
+  background: rgba(0, 148, 64, 0.15);
+  color: var(--color-verde-oscuro);
+}
+.pill-gold {
+  background: rgba(255, 193, 7, 0.18);
+  color: #a66c00;
+}
+.pill-blue {
+  background: rgba(0, 123, 255, 0.14);
+  color: #0d4f9b;
+}
+
+/* Cursor zanahoria global */
+html,
+body,
+*:not(textarea):not(input):not(select) {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24'><g><path d='M9 14c3-3 6-4 9-3-1 3-2 6-5 9-3 3-6 2-9-1 3-3 4-5 5-5z' fill='%23ff7f0e'/><path d='M15 7c1-2 3-3 5-3-1 2-2 3-3 4-1-1-1-1-2-1z' fill='%2300a651'/><path d='M13.5 6c0.5-1.5 2-2.5 3.5-3-0.5 1.5-1.5 2.5-2.5 3.5-0.5-0.5-0.5-0.5-1-0.5z' fill='%2300a651'/></g></svg>")
+      3 3,
+    auto !important;
+}
+.nav-links a,
+button,
+a,
+input,
+textarea {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24'><g><path d='M9 14c3-3 6-4 9-3-1 3-2 6-5 9-3 3-6 2-9-1 3-3 4-5 5-5z' fill='%23ff7f0e'/><path d='M15 7c1-2 3-3 5-3-1 2-2 3-3 4-1-1-1-1-2-1z' fill='%2300a651'/><path d='M13.5 6c0.5-1.5 2-2.5 3.5-3-0.5 1.5-1.5 2.5-2.5 3.5-0.5-0.5-0.5-0.5-1-0.5z' fill='%2300a651'/></g></svg>")
+      3 3,
+    pointer !important;
+}
+.input-group select {
+  -webkit-appearance: menulist;
+  appearance: auto;
+  cursor: default !important;
+}
+
+/* Cursor más grande al hover en elementos interactivos */
+.nav-links a:hover,
+.btn:hover,
+button:hover,
+a:hover,
+input:hover,
+select:hover,
+textarea:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24'><g><path d='M9 14c3-3 6-4 9-3-1 3-2 6-5 9-3 3-6 2-9-1 3-3 4-5 5-5z' fill='%23ff7f0e'/><path d='M15 7c1-2 3-3 5-3-1 2-2 3-3 4-1-1-1-1-2-1z' fill='%2300a651'/><path d='M13.5 6c0.5-1.5 2-2.5 3.5-3-0.5 1.5-1.5 2.5-2.5 3.5-0.5-0.5-0.5-0.5-1-0.5z' fill='%2300a651'/></g></svg>")
+      4 4,
+    pointer !important;
+}
+
+/* Utilidades de iconos del campo */
+.farm-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(0, 148, 64, 0.12);
+  color: var(--color-verde);
+  box-shadow: var(--sombra-suave);
+}
+.farm-icon.gold {
+  background: rgba(255, 193, 7, 0.18);
+  color: var(--color-negro);
+}
+.farm-icon.blue {
+  background: rgba(0, 123, 255, 0.14);
+  color: #0d4f9b;
+}
+.farm-icon.dark {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--color-gris);
+}

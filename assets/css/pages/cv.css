@@ -1,0 +1,15 @@
+/* CV alternativo */
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-md);
+}
+.cv-card {
+  background: var(--color-blanco);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--sombra-suave);
+}
+.cv-card h3 {
+  margin-bottom: var(--spacing-sm);
+}
